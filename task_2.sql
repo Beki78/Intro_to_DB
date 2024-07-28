@@ -2,7 +2,7 @@ USE alx_book_store;
 
 CREATE TABLE IF NOT EXISTS Authors (
     author_id INT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    author_name VARCHAR(255) 
 );
 
 CREATE TABLE IF NOT EXISTS Books (
