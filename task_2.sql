@@ -17,7 +17,9 @@ CREATE TABLE IF NOT EXISTS Books (
 CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT PRIMARY KEY,
     name VARCHAR(255) ,
-    email VARCHAR(255)
+    customer_name VARCHAR(215),
+    email VARCHAR(215),
+    address TEXT
 );
 
 CREATE TABLE IF NOT EXISTS Orders (
@@ -28,11 +30,9 @@ CREATE TABLE IF NOT EXISTS Orders (
 );
 
 CREATE TABLE IF NOT EXISTS OrderDetails (
-    order_detail_id INT PRIMARY KEY,
+    book_id INT int PRIMARY KEY
     order_id INT,
-    book_id INT,
-    quantity INT,
-    price DOUBLE,
+    quantity DOUBLE,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
