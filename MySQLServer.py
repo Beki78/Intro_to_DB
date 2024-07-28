@@ -9,6 +9,8 @@ def connect_to_database():
             password="0978101611@Baki",
             database="alx_book_store"
         )
+        cursor = mydb.cursor()
+        cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
         if mydb.is_connected():
             print("Database 'alx_book_store' created successfully!")
     except Error as e:
