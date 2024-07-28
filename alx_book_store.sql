@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 use alx_book_store;
-CREATE TABLE Books (book_id int primary key);
+CREATE TABLE Authors (author_id int primary key, author_name VARCHAR(215));
 SHOW TABLES;
 SHOW columns from Books;
